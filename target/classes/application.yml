@@ -1,0 +1,34 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          community-solid-server:
+            client-id: ${CSS_CLIENT_ID}
+            client-secret: ${CSS_CLIENT_SECRET}
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            authorization-grant-type: authorization_code
+            scope: openid, webid, offline_access
+          solidcommunity:
+            client-id: ${SOLIDCOMMUNITY_CLIENT_ID}
+            client-secret: ${SOLIDCOMMUNITY_CLIENT_SECRET}
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            authorization-grant-type: authorization_code
+            scope: openid, webid, offline_access
+          inrupt:
+            client-id: ${INRUPT_CLIENT_ID}
+            client-secret: ${INRUPT_CLIENT_SECRET}
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            authorization-grant-type: authorization_code
+            scope: openid, webid, offline_access
+        provider:
+          community-solid-server:
+            issuer-uri: http://localhost:3000/
+          solidcommunity:
+            authorization-uri: https://solidcommunity.net/authorize
+            token-uri: https://solidcommunity.net/token
+            jwk-set-uri: https://solidcommunity.net/jwks
+          inrupt:
+            authorization-uri: https://inrupt.net/authorize
+            token-uri: https://inrupt.net/token
+            jwk-set-uri: https://inrupt.net/jwks
