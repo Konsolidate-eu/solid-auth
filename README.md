@@ -21,15 +21,22 @@ You need to register your application at the identity provider of your choosing.
 ```shell
 https://YOUR_IDENTITY_PROVIDER/.well-known/openid-configuration
 ```
-Keep in mind that you should execute this request with a body (I only used the fields below)
-- redirect_uris: ["YOUR_REDIRECT_URIS", "...", "..."]
--- see application.yml for "{baseUrl}/login/oauth2/code/{registrationId}"
--- which contains the baseUrl from your application (when running locally: http://localhost:8080)
--- and also the registrationId (which can be: "community-solid-server", "inrupt" or "solidcommunity")
-- application_type: "web"
-- token_endpoint_auth_method: "authorization_code"
-- scopes: "openid,webid,offline_access"
+`Keep in mind that you should execute this request with a body.`
 
+#### Request body
+|Parameter|Value
+|-|-
+| redirect_uris | ["YOUR_REDIRECT_URIS", "...", "..."]
+| application_type | "web"
+| token_endpoint_auth_method | "authorization_code"
+| scopes | "openid,webid,offline_access"
+
+#### Explaining the redirect uris
+- see application.yml for "{baseUrl}/login/oauth2/code/{registrationId}",
+- it contains the baseUrl from your application (when running locally: http://localhost:8080),
+- and also the registrationId (which can be: "community-solid-server", "inrupt" or "solidcommunity")
+
+#### Response
 Your identity provider should respond with "client_id" and "client_secret" (and also some other fields which we don't use in this application).
 
 ## 🗃 Environment variables
