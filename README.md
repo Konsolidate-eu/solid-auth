@@ -4,7 +4,8 @@ Solid Authentication combined with Spring Boot.
 This project demonstrates the Solid Authentication process (OAuth2 - OIDC as specified in the [Solid OIDC Primer](https://solid.github.io/solid-oidc/primer/)) combined with [Spring Boot](https://spring.io/projects/spring-boot) and [Spring Security](https://spring.io/projects/spring-security)).
 
 You can find extra explanation for this repository in the [document](https://www.konsolidate.eu/stories/solid-spring) we posted on the Konsolidate website.
-Ramark: this code is not tested for production. 
+
+Remark: this code is not tested for production. 
 
 ## ⚡ Requirements
 - [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
