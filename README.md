@@ -5,7 +5,7 @@ This project demonstrates the Solid Authentication process (OAuth2 - OIDC as spe
 
 You can find extra explanation for this repository in the [document](https://www.konsolidate.eu/stories/solid-spring) we posted on the Konsolidate website.
 
-Remark: this code is not tested for production. 
+Remark: this code is not tested for production and may be outdated at any point in time. 
 
 ## ⚡ Requirements
 - [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
